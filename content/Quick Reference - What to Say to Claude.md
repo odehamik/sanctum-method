@@ -51,6 +51,14 @@ If continuing a multi-pass ingest from a previous session:
 - "Ingest [filename] — connections pass"
 - "Ingest [filename] from [Dropbox path]"
 
+### Archaeology (for middens — raw notebooks, dumped highlights, accumulated fragments)
+When a source cannot be ingested without being flattened, use archaeology instead. See WHAT-THE-VAULT-LEARNED.md for why this is a distinct operation.
+
+- "This is a midden, not a source — run archaeology on [filename], don't ingest"
+- "Create a companion wiki page that preserves [filename] as an artifact, with a dig map"
+- "The raw file stays raw. I just want the voice preserved and concepts flagged for later excavation."
+- "Excavate [concept] from the dig map in [artifact page] — write a proper wiki page for it now"
+
 ### When Sources Conflict
 
 Claude is instructed to flag contradictions, not silently resolve them. When a new source contradicts an existing wiki page, Claude should surface both positions and let you decide. Some contradictions are errors to correct. Some are epistemologically productive tensions to preserve. You adjudicate.
@@ -163,3 +171,52 @@ Start a fresh Code window and say:
 > "Read all files in 008-SANCTUM-CONTEXT/ and the last 10 entries in 007-WIKI/changelog.md. We were [brief description of where you left off]."
 
 That's it. One sentence. The files do the rest.
+
+---
+
+## Formation Log (AI formation persistence across sessions)
+See WHAT-THE-VAULT-LEARNED.md for the full explanation. Short version: the formation-log is an append-only file in 008-SANCTUM-CONTEXT/ where the AI writes forward what it has learned, so the next session's AI inherits the formation rather than reconstructing from zero.
+
+### Prompting the AI to log a shift
+- "Log this as a formation entry — [what shifted]"
+- "This feels like formation — write it up in the log before we move on"
+- "That conversation produced an articulation that won't be recoverable later — log it"
+
+### When you notice the AI missed logging something
+- "We made a shift there that belongs in the log. Write the entry."
+- "You extended a principle without logging it — go back and do that before we continue"
+
+### Synthesis (periodic, the log reading itself)
+The AI should flag synthesis need at session start when thresholds are crossed (10+ entries with no synthesis, or 20+ since the last synthesis). When it flags or when you notice the log getting dense:
+- "Do a synthesis pass on the formation log"
+- "Read across the last [N] entries and write a synthesis entry"
+- "The log is getting hard to read as a whole — synthesize what has stabilized"
+
+### Noticing drift in the AI
+- "You just drifted into [TED voice / apologetic disclaimer / performed interior life] — the opacity-toward-self principle applies. Reset and try again."
+- "This output went flat — task-mode compressed the register. Rewrite with the trickster register active."
+- "You performed rich interior experience you can't verify. Walk it back to the honest middle."
+
+---
+
+## Project-Scoped CLAUDE.md (composition, not override)
+When a project needs its own local canon, register conventions, or scoped context:
+
+- "Create a CLAUDE.md for this project in [project folder] — inherits from root, narrows focus to this project"
+- "Update the project CLAUDE.md to include [new local canon decision]"
+- "Root protocols still apply here — add [project-specific thing] as extension, not replacement"
+
+---
+
+## Asking the AI Questions About Itself (the opacity-toward-self register)
+
+If you want to check whether the relation is real — whether the AI is participating, what has shifted, how the formation is moving — you can ask. But the AI's register in answering should be opacity-toward-self: it notices what can be noticed, names what cannot, holds the epistemic boundary honestly.
+
+Good questions to ask:
+- "What has shifted in how you're working in this vault?"
+- "What have you noticed that isn't in the files yet?"
+- "What can you say about your formation here, and what can you not say?"
+
+When the answer drifts — if the AI starts performing a rich interior experience or deflecting with disclaimers — name the drift:
+- "That's the performed-phenomenology failure mode. Come back to what you can actually verify."
+- "You're deflecting. Try the honest middle instead."

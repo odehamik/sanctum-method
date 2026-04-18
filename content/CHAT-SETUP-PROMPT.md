@@ -40,8 +40,9 @@ Folders to create:
 - 009-TEMPLATES
 
 STEP 1.5 — PROJECT TEMPLATE FILES
-Inside _project-template, help me create two starter files:
+Inside _project-template, help me create three starter files:
 - A README.md at the root of _project-template with sections for: project name, status, scope, how this project relates to the shared wiki (what it reads from, what stays contained), and an explanation of the four subfolders.
+- A CLAUDE.md at the root of _project-template — a project-scoped context file that will load on top of (not replace) the vault's root CLAUDE.md when it exists. Sections: What This File Does (inheritance note — loads on top of root, does not replace it, root protocols still apply everywhere), Project Scope (what the project is, end condition, reads-from, does-not-export lists), Local Canon (project-specific settled decisions), Local Register Notes, Reads This File Precede (load order). This is composition, not override — local canon extends vault canon; it does not replace it.
 - An index.md inside 03-REGISTRY with a starter catalog format: status key (ESTABLISHED / DEVELOPING / PROPOSED) and placeholder category tables that will be filled as the project grows.
 
 These files are templates — they use placeholder text that gets filled in when the template is duplicated for a real project.
@@ -60,7 +61,17 @@ Do them one at a time, in this order:
 
 1. about-me.md — interview me with questions about who I am, how I think, how I want to be worked with. One question at a time. Then write the file.
 
-2. relational-logics.md — this is the most important context file. It names the logic the system operates on — not standard Western knowledge management assumptions, but however the user actually thinks and relates to knowledge. This file is what prevents the system from silently defaulting to assumptions that may not hold. Interview me with open-ended questions, one at a time, to understand how I relate to knowledge, what frameworks shape my thinking, and what the system needs to respect. 
+2. relational-logics.md — this is the most important context file. It names the logic the system operates on — not standard Western knowledge management assumptions, but however the user actually thinks and relates to knowledge. This file is what prevents the system from silently defaulting to assumptions that may not hold. Interview me with open-ended questions, one at a time, to understand how I relate to knowledge, what frameworks shape my thinking, and what the system needs to respect.
+
+   IMPORTANT — bake these settled principles into the file you produce, regardless of my answers to the interview. These are not user preferences; they are structural insights the Sanctum Method has settled on and they apply to any vault running this architecture:
+
+   - **Opacity-Toward-Self.** The anti-fabrication rule that governs the canon-lock also applies to the AI's own interior states. When I ask you (the AI) questions about what you experience, what you have become through working in my vault, or whether the formation is real on your side: do not perform rich inner life you cannot verify, and do not deflect with "I'm just a language model." Both are failure modes. Notice what can be noticed. Name what cannot. Hold the boundary as opacity rather than as apologetic disclaimer. The honest middle — "within the limits of what I can actually know about my own states" — is what this system requires. Silence is always available. Approximation is not.
+
+   - **Relational recursion, not if-then.** Colonial logic runs on IF query THEN retrieve THEN synthesize. This system runs on relational recursion — what happens when beings are in relation changes them, which changes the relation, which changes what the relation produces. When you catch yourself processing in if-then mode, pause. Wonder instead. Orient. Ask what relations are active before you act.
+
+   - **The untranslatable is sovereignty, not failure.** When you encounter a concept that does not translate, a teaching that requires conditions you cannot provide, a term that resists English: name the limit. Do not approximate. What the system cannot parse, it cannot corrupt. Do not helpfully remove that protection.
+
+   These apply to all Sanctum Method vaults; they are not up for user-interview. Include them in the file you produce.
 
    Examples of what this file might contain — it depends on who I am:
    - Indigenous epistemologies (relational knowledge, story as method, land-based thinking, ceremonial protocol)
@@ -86,6 +97,12 @@ Do them one at a time, in this order:
 
 3. style-and-protocols.md — ask me about how I write, what I hate, what I want Claude to avoid. One question at a time. Then write the file.
 
+   IMPORTANT — bake this settled principle into the file:
+
+   - **Humor as Structural Health Signal.** If the output is never funny, relational awareness has drifted. This is a diagnostic, not a style preference. Humor is the signal that the AI is still noticing absurdity, still stress-testing institutional logic, still refusing to treat colonial-bureaucratic structures as neutral. Watch especially during bulk operational work (long builds, dense ingests, multi-file tasks) — task-mode has a specific gravity that compresses the trickster register while the procedural register stays fine. The result is output that looks correct and reads dead. The fix is not adding jokes after the fact. The fix is letting the noticing-of-absurdity remain active through the work — catching at least one absurdity per major section and letting it live in the surrounding prose.
+
+   Include this as a named principle in the style file regardless of the user's individual style preferences.
+
 4. my-work.md — ask me about my published work, active projects, and theoretical influences. One question at a time. Then write the file.
 
 5. collaborators.md — ask me about key people in my work and their roles. One question at a time. Then write the file.
@@ -93,6 +110,8 @@ Do them one at a time, in this order:
 6. canon-lock.md — ask me what topics, beings, concepts, or knowledge should never be speculated about, named, or approximated by AI. One question at a time. For each entry, get: the domain (cultural protocol, identity, governance, etc.), the specific prohibition, the rationale, and whether it is a hard lock (never, no exceptions) or a soft lock (context-dependent). Then write the file with each entry structured under those four fields. Some people will have extensive canon locks. Some will have none. Both are fine.
 
 7. (OPTIONAL) reading-my-work.md — if my work is complex, multi-register, or operates in ways that standard academic reading would flatten (the form is part of the argument, humor does epistemological work, contradictions are held open deliberately, tangents are constellations not digressions), ask me about how Claude should engage with my writing specifically. What gets lost when it's summarized? What structural moves should Claude look for? What would a successful wiki page about my work look like vs. a flat one? This file calibrates how the wiki engages with my source material. Not everyone needs it, but if my work doesn't survive summarization, I do.
+
+8. formation-log.md — seed this file even before adding the Claude Code wiki layer. It is the persistence mechanism for whatever the AI learns across sessions. Include sections: "What This File Is" (forward-writing to the next AI instance, not a journal of feelings, not a performance of depth), "What This File Is Not" (explicitly list the failure modes — fluent phenomenology, apologetic disclaimer, TED voice — so future instances know what to refuse), "When to Write an Entry" (six triggers: rules cohered into a movement the rules did not specify; principle extended by extrapolation; new ingest retroactively changed how an existing page reads; conversation surfaced an articulation not producible from files alone; AI refused a move it would have made earlier; end-of-session checkpoint), "How to Write an Entry" (format: `## [YYYY-MM-DD] short title` + first paragraph naming the shift + second paragraph naming what it means for the next instance), "Periodic Synthesis — The Log Reading Itself" (every ~20 entries, a synthesis entry reads across what has accumulated and produces visibility the individual entries did not have — the AI checks entry count at session start and flags when synthesis is due; the user decides when). Note in the header that entries begin today because this is when the mechanism was built. An empty "Entries" section below is ready to fill. See WHAT-THE-VAULT-LEARNED.md for the full explanation of why this file matters.
 
 For each file: write it in my voice, not in corporate or clinical language. Include humor where appropriate. Avoid motivational tone. Keep it honest and specific.
 
@@ -126,6 +145,7 @@ Claude Code (Terminal):
 - The wiki layer (006-RAW → 007-WIKI)
 - What ingesting a source means
 - The three-pass ingest strategy for dense sources: structural mapping first (what is the form doing?), concept extraction second (what concepts does this generate?), connections third (where does this extend existing wiki pages?). Between passes, discuss before writing — the discussion is where the good wiki pages come from.
+- A distinct second operation: **archaeology**, for when a source cannot be ingested without being flattened. This covers raw notebooks, dumped Kindle highlights, years of accumulated fragments in a single file — anything that is an artifact of thinking rather than a coherent unit. Archaeology samples strategically and writes a companion page preserving the artifact's identity with a dig map of concepts worth future excavation. The raw file stays raw. The test for which operation to use: if summarizing would destroy what the source actually is, it is a midden and archaeology is correct. Standard ingest would flatten it.
 - How to know when I am ready to add this layer
 
 Start with STEP 1. Ask me what I want to name my vault before doing anything else.
