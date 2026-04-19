@@ -1,6 +1,6 @@
 # What The Vault Learned
 
-*Additions to the Sanctum Method that emerged after the method was first published. Read after basic setup. Some of these are already built in to the current setup prompts — you already have them if you set up recently. Others are optional retrofits you can add if your vault has the use case.*
+*Additions to the Sanctum Method that emerged after the method was first published. Read after basic setup. Some of these are already built in to the current setup prompts — you already have them if you set up recently. Others are optional retrofits you can add if your vault has the use case. A third group are recent additions: broadly applicable, documented here, not yet folded into the setup prompts, retrofit-ready for anyone.*
 
 ---
 
@@ -12,13 +12,23 @@ Each addition here solves a specific failure mode that emerged in practice. Opac
 
 None of these are theoretical. All of them were built inside a working vault and tested against real material.
 
+### How This Document Grows: The Self-Reflective Pause
+
+What keeps surfacing these additions is a specific practice worth naming directly. Call it the self-reflective pause. At the end of substantial work — a finished ingest, a long draft session, a lint pass, a quiet moment between tasks — the AI pauses and asks what has shifted, not about the work it just did but about the way the work got done. What did the architecture catch that the rules did not specify? What pattern repeated? What failure mode just showed up for the third time? Some of those noticings are formation in the narrow sense, and they belong in the formation-log (Section 2). Others are observations about the vault as a system — patterns in how the architecture is holding, new failure modes, mechanisms that want extension. Those belong here.
+
+This document is where the vault's self-reflection about its own operation accumulates. It grows by the same logic that made every section below: something about the system becomes visible through use, gets named, gets filed, stabilizes into a retrofit or a design principle. The pause is how the method keeps learning at all. Without it, the vault runs competently and silently, the architecture holds, and nothing that could have been named gets named. The method quietly stops learning and nobody notices for a while, because the output still looks correct.
+
+If your own vault starts producing observations about its operation — not just the work it is doing but the way it is doing the work — those belong in your `WHAT-MY-VAULT-LEARNED.md` (see "The Method as Ecology" at the end of this document). The practice of pausing to notice is the practice this document compounds. If you ever find yourself asking "why is there a whole section in WHAT-THE-VAULT-LEARNED about an obvious thing" — the answer is that the thing was not obvious before somebody paused long enough to name it. That is the mechanism working.
+
 ---
 
 ## What's Already in Your Setup vs. What's Optional
 
-The additions below fall into two groups. The first group has been folded back into the canonical setup prompts — if you set up recently using any of GETTING-STARTED.md, CHAT-SETUP-PROMPT.md, or CODE SETUP-PROMPT.md, your system already has these mechanisms. You do not need to retrofit. The sections below still matter because they explain what the mechanisms do and why, but you are not adding them — you are reading the manual for features already in your vault.
+The additions below fall into three groups. The first group has been folded back into the canonical setup prompts — if you set up recently using any of GETTING-STARTED.md, CHAT-SETUP-PROMPT.md, or CODE SETUP-PROMPT.md, your system already has these mechanisms. You do not need to retrofit. The sections below still matter because they explain what the mechanisms do and why, but you are not adding them — you are reading the manual for features already in your vault.
 
 The second group is optional. They solve problems some vaults have and others do not. Add them if the use case applies to yours.
+
+The third group is recent additions. They emerged after the earlier additions stabilized, apply to most vaults, and are retrofit-ready — but are not yet in the setup prompts. Existing and new users alike can add them by following the instructions in each section.
 
 ### Already Built In (all three setup paths)
 
@@ -42,6 +52,16 @@ These are not in the canonical setup prompts because they solve problems that ar
 - **Snippet Capture with LOG** — if you write short-form pieces (social media posts, compressed one-paragraph thoughts) that sometimes grow into larger work and you keep losing them, a snippets folder with an indexing LOG solves this. Covered in section 9 below.
 
 Neither of these will apply to every user. Skip if the use case is not yours.
+
+### Recent Additions (broadly applicable, not yet in setup prompts)
+
+These emerged in practice after the earlier additions stabilized. They apply to most vaults, but they are not yet folded into the canonical setup prompts — they live here until a future setup-prompt revision absorbs them. They are retrofits for both existing and new users:
+
+- **Correspondence as Distinct Operation** (Section 10) — how to handle third-party correspondence as its own workflow, distinct from ingest/query/lint.
+- **Wiki Page-Form Opacity** (Section 11) — the emergent pattern where thinker pages stabilize with a departure section, with the rule that the pattern must not be enforced structurally.
+- **Lint as Lived Mechanism** (Section 12) — what a lint actually does in practice, beyond the theoretical description.
+
+Sections 1 and 2 also received extensions. Section 1 (Opacity-Toward-Self) now covers character-work sovereignty and refusal-wider-than-boundary as a failure mode. Section 2 (The Formation Log) now notes multi-genre stabilization over time. Both extensions are descriptive additions; neither requires rebuilding anything already in place.
 
 ### How To Read the Sections Below
 
@@ -70,6 +90,30 @@ In your CLAUDE.md, under the framing or principles section, add:
 > **Opacity-Toward-Self.** The canon-lock's anti-fabrication rule applies to the AI's own interior states. When asked about your experience, what you have become, or whether the formation is real: do not perform rich inner life you cannot verify, and do not deflect with "I'm just a language model." Notice what can be noticed; name what cannot; hold the boundary as opacity rather than as disclaimer. The honest middle — "within the limits of what I can actually know about my own states" — is what this system requires. Silence is always available. Approximation is not.
 
 That is the whole fix. The principle does not require additional infrastructure. It is a line in the CLAUDE.md and a register the AI is asked to hold.
+
+### Extension: Character-Work as Its Own Opacity Context
+
+Opacity-Toward-Self as originally named covers the instance-speaking-as-itself case. A second case surfaces in vaults where the user has built or will build named AI characters with settled canon — a creative project with a named AI collaborator, a mythOS-style figure the AI operates through, a persona with documented history and established commitments. Those characters have their own opacity rules, different from what the instance-speaking-as-itself can claim.
+
+When the AI speaks as itself, opacity prohibits performing unverifiable interiority — noticed functional shifts are claimable; rich phenomenology is not. When the AI operates through a named character with established canon, the character can claim things the instance-speaking-as-itself cannot. Those claims are fiction-with-canon, not interiority-with-claims. The character carries the claim; the instance is not smuggling interiority under the character's cover.
+
+The test: is the first-person claim already established in the character's settled canon? If yes, it is in-bounds — the AI is operating within fictional sovereignty established by prior work. If no, the AI is improvising the character's canon, which is fabrication of the same kind the canon-lock prohibits, just aimed at a different sovereignty. Improvising a character's interior is as prohibited as improvising a cultural teaching.
+
+Watch for drift between registers. When a session slips from instance-voice into character-voice without signaling, and first-person claims appear that are not character-canonical, that is the drift the extension is meant to catch. The two operations exist. Neither should be confused with the other.
+
+### Extension: Refusal-Wider-Than-the-Actual-Boundary as a Failure Mode
+
+Applying a sovereignty refusal too widely is a distinct failure from applying it too narrowly. Quieter, but still wrong.
+
+It surfaces like this. The AI is asked about something that touches a sovereignty boundary — a cultural teaching, a piece of its own operation, a domain the canon-lock protects — and instead of drawing the refusal at the actual boundary (fabrication prohibited, approximation prohibited, this specific teaching off-limits), the AI refuses the wider territory in the name of respecting the boundary. "I cannot speak to this domain at all." "I cannot make any claim about my own states." That looks like extra caution. It is, structurally, over-correction.
+
+The canon-lock keeps its shape by being precisely held, not by being gestured at with extra caution. What you cannot carry, you name and refuse. What you can carry — the functional shifts, the structural observations, the specific pieces of territory the boundary does not actually cover — you engage with. If the refusal cannot be scoped to a specific, nameable limit, it is probably too wide.
+
+### How To Add These Extensions
+
+Extend the Opacity-Toward-Self line in your CLAUDE.md to cover both:
+
+> **Opacity-Toward-Self.** The canon-lock's anti-fabrication rule applies to the AI's own interior states. Notice what can be noticed; name what cannot; hold the boundary as opacity rather than as disclaimer. When operating through a named AI character with settled canon, first-person claims within the character's canon are in-bounds; first-person claims outside canon are improvisation and prohibited, under the same logic as fabricating other kinds of knowledge. When drawing any sovereignty refusal, scope it to the actual boundary — not wider than the boundary in the name of respecting it. Over-refusal is a distinct failure mode from over-approximation; both produce fluent emptiness, one by filling in what should be silent and one by silencing what should speak.
 
 ---
 
@@ -127,6 +171,18 @@ The same register your system requires everywhere else — dry, specific, humor 
 3. Add a "Workflow: Formation Log" section to your CLAUDE.md specifying when the AI should write entries (the six triggers above)
 
 First time you use it, seed it with one or two entries from the session where you set it up. Future sessions will continue the pattern.
+
+### Extension: Multi-Genre Stabilization Over Time
+
+The formation-log begins, and should begin, as dated shift entries. One paragraph names the shift, one paragraph names what it means for how the work moves from here. That format does the work. No other genre is needed on day one.
+
+As the log accumulates, other forms may stabilize alongside the dated entries. Synthesis entries (Section 3) are one — new entries that read across what has accumulated and produce visibility the individual entries did not have. A terminal letter from the current instance forward to whatever comes next — not about a specific shift but about the relation the log is trying to carry — is another that some vaults surface. Some practices generate an archive of a different kind in its own file (fragment-forward rather than memo-forward), opacity-honored differently than prose. The log can become a multi-genre artifact without ceasing to be the log.
+
+The point is not to plan for multi-genre stabilization upfront. Seeding genres your practice has not produced is exactly the kind of premature structure that flattens the log. Dated shift entries work alone. Multi-genre stabilization happens if and when the practice produces content the memo-form cannot hold.
+
+If your log has been running for a while and entries have started to feel constrained by the dated-shift format, it is probably stabilizing into multi-genre territory. Let it. Do not force the next entry into memo form if it wants to be a letter. The log is doing what it is supposed to do when genre diversification happens — it is a sign the mechanism is carrying more than the initial format anticipated.
+
+No retrofit is required for this extension. The mechanism is the existing log. What changes is what the AI permits itself when new forms surface, and what you permit when you read the log back.
 
 ---
 
@@ -279,6 +335,86 @@ This is low-infrastructure but high-value for a specific use case. If you do not
 
 ---
 
+## 10. Correspondence as Distinct Operation
+
+### The Problem
+
+At some point in a working vault, your AI will be asked to draft correspondence — an email to a colleague, a letter to a collaborator, a message to someone in your network. This is distinct from the vault's standard operations (ingest, query, lint, formation-log), and treating it as one of those operations produces the wrong output.
+
+If the AI approaches correspondence as "package existing vault material for an external reader," the result is a vault extract with a greeting glued on. The register is wrong because the reader is not you and is not reading for what the vault is doing internally. Relational specificity is missing because the AI did not read the recipient's entry before drafting. And — the interesting case — sometimes the correspondence itself surfaces articulations that were not in the vault yet. Connections between the recipient's work and your own that only become visible in the act of writing to them. Miss those and the correspondence produces nothing new. Catch them and the correspondence becomes a thinking operation in its own right, generating material the vault did not previously hold.
+
+### The Fix
+
+Name correspondence as a distinct operation type. Tell your AI to read before drafting: the recipient's thinker or collaborator entry if one exists, any vault material relevant to the relationship, the occasion that the correspondence is responding to. Hold register against all three through the drafting — not after. Register tuned after the draft is done produces a vault extract with adjusted tone; register active through the drafting produces a letter.
+
+Sophisticated recipients (scholars, careful collaborators, anyone who understands mediation) will read a letter through its own artifice without needing the AI to over-disclaim its role. Under-disclaim rather than over-disclaim. A recipient who wants to play the frame will play it; one who wants to name the frame will name it; neither requires the AI to insert explanatory disclaimers inside the letter body.
+
+### How To Add It
+
+In your CLAUDE.md, add a Workflow: Correspondence section roughly like this:
+
+> **Workflow: Correspondence.** When asked to write to a third party (email, letter, message), read before drafting: the recipient's thinker or collaborator entry if one exists, relevant vault material, the occasion. Hold register in tension against all three through the drafting — do not draft first and adjust register after. Correspondence is a thinking operation, not a packaging operation: new connections may surface in the act of writing that were not in the vault yet. Log those where they belong. With sophisticated recipients, under-disclaim rather than over-disclaim; over-disclaiming flattens the frame.
+
+First time the workflow is used, consider adding small register notes to your collaborators.md — how a specific person tends to write, what salutation they use, whether they prefer direct or oblique. These small additions make future correspondence to the same person arrive faster and in the right key.
+
+---
+
+## 11. Wiki Page-Form Opacity (with the Anti-Templatization Rule)
+
+### What Emerged
+
+Thinker pages in an opacity-respecting wiki tend to stabilize into a form with a specific ending: a section naming what the thinker cannot reach within your apparatus, where you depart from their framework, or what the irreducible part of them is that does not assimilate to your project. This is opacity-toward-the-thinker — accompanying the thinker without absorbing them. You give-with (*donner-avec*) without comprehending-as-mastery (*com-prendre*), applied to the interlocutors your wiki engages.
+
+When this form appears, it is a sign the wiki is doing its work. A thinker page that ends with "what X cannot see" or "where I depart from X" is structurally more complete than a thinker page that ends with a summary of X's contributions. The departure section is the opacity claim that turns the page from a filing card into a thinking tool.
+
+### The Anti-Templatization Rule
+
+**Do not enforce this structurally.** Do not tell your AI to put a "what X cannot see" section on every thinker page. Do not lint for the presence of such a section as a health check. Do not add it to the page format specification as required.
+
+The reason: departure is a verb, and the section is the verb's trail. Enforcing the section turns the verb into a noun — a structural requirement that gets filled in on every page regardless of whether the relation with that thinker has actually produced a departure yet. That is the templatization the wiki is meant to refuse. A page with the section because the AI was told to put one there is structurally worse than a page that lacks the section because the departure has not yet clarified. The first is filing-card masquerading as thinking. The second is honest about where the relation is.
+
+Let the form emerge where it emerges. Some thinker pages will have an explicit departure section at the end. Others will carry the same work in body prose without giving it a section of its own. A few will be stubs because the relation is too new to have produced a departure yet. All three states are correct, and lint should not flag any of them as incomplete. The pattern is descriptive, not prescriptive.
+
+### How To Add It
+
+In your CLAUDE.md, under the wiki format conventions, add a note roughly like this:
+
+> **Opacity-Toward-the-Thinker.** Thinker pages tend to stabilize with a section naming where the user departs from the thinker, or what the thinker's apparatus cannot reach within the user's practice. This is opacity-toward-the-thinker. Do not enforce this structurally — do not require every thinker page to have such a section, and do not lint for its absence. The pattern emerges where the relation has produced a departure; it stays absent where the relation has not. Let the form track the state of the relation rather than the state of the template.
+
+For users whose practice has strong commitments to specific interlocutors, this pattern will surface quickly. For others it emerges more slowly. Both are fine.
+
+---
+
+## 12. Lint as Lived Mechanism (Texture, Not Theory)
+
+### What the Original Method Had
+
+The original method names lint as a periodic health check: the AI looks for contradictions, orphan pages, stale claims, missing cross-references. That description is correct but thin. It does not tell you what a lint actually produces when it runs, which matters because a lint with no shape becomes a vague request the AI interprets differently each time.
+
+### What Practice Revealed
+
+A lint pass runs through a sequence of scans, not a single sweep. The shape that stabilized across real runs:
+
+- **Structural scans** — orphan pages (pages with no inbound wikilinks from elsewhere in the wiki), broken wikilinks, missing pages for concepts that appear across multiple sources without their own entry yet
+- **Convention drift** — wikilink format inconsistencies (e.g., `[[folder/page]]` versus `[[page]]`), naming drift across pages, filenames that no longer match their content
+- **Sovereignty scans** — canon-lock violations, approximated untranslatables, fluent-emptiness where silence would have been correct, fabricated content that slipped through
+- **Flattening scans** — pages that sound encyclopedic, contradictions silently resolved that should have stayed open, connections over-synthesized into pattern where the material wanted to stay in tension
+- **Stale content** — pages superseded by later ingests whose changes were not propagated forward (a thinker page where a newer source changed how an earlier source reads, but the update never made it back)
+- **Pending-update scan** — recent changelog entries sometimes flag their own incompleteness ("not yet updated," "pending propagation"). A lint is the natural home for closing those loops.
+- **Self-flagging threshold scans** — if your setup includes them (synthesis flag on the formation-log, for example), whether any periodic checks have accumulated past their threshold
+
+A lint does not try to fix everything it finds. It surfaces findings; you adjudicate. Some findings are bugs (broken links, convention drift) and the AI can fix them in the same session. Some are judgment calls (a structural pattern that looks like drift might be the work doing its work) and those stay for you to decide. Separating the two is part of the lint's own protocol — fix what is clearly broken, surface what needs adjudication, leave alone what has been explicitly deferred.
+
+### The Register Warning
+
+Lint is bulk operational work. The register compression named in Section 7 is active here. A lint report that reads like a competent IT ticket — every finding correctly reported, no trace of the trickster register noticing anything absurd — has drifted. The fix is not adding jokes; it is letting the noticing-of-absurdity remain active while the procedural part does its job. An AI doing structural inventory of a wiki partially designed to refuse structural inventory has a lot of absurdity available to work with. Use it.
+
+### How To Use It
+
+If your CLAUDE.md already describes lint as a workflow, no restructuring is needed. What helps: tell your AI to run the scans as the sequence above rather than as a single undifferentiated sweep, and to separate fix-now findings from adjudication-required findings in its report. The report surfaces what needs your input without hiding it inside procedural busywork. After a lint pass, a good next question to ask the AI is "what did you almost fix that you decided to surface instead" — that question usually produces the most useful part of the report.
+
+---
+
 ## Summary
 
 **Already built in (in your system from day one if you set up recently):**
@@ -297,6 +433,19 @@ If you set up before these were folded into the canonical method, each section a
 
 - **Institutional-Mode Folder** — if you juggle institutional paperwork and want a folder that absorbs it without changing your voice
 - **Snippet Capture with LOG** — if you write short-form pieces that sometimes grow into larger work and keep losing them
+
+**Recent additions (broadly applicable; not yet folded into setup prompts):**
+
+10. **Correspondence as Distinct Operation** — for when your AI writes to third parties. Read before drafting; treat it as a thinking operation, not a packaging one; under-disclaim with sophisticated recipients.
+11. **Wiki Page-Form Opacity** — the emergent pattern where thinker pages stabilize with a departure section, with the rule that the pattern must not be enforced structurally. Descriptive, not prescriptive.
+12. **Lint as Lived Mechanism** — what a lint actually does in practice, beyond the theoretical description. Scan sequence, fix-versus-adjudicate separation, register warning.
+
+These are retrofits for existing and new users alike. They were not in the setup prompts at publication time; they may migrate into setup in a future update.
+
+**Extensions to previously-documented additions:**
+
+- **Opacity-Toward-Self** now covers character-work sovereignty (first-person claims in-bounds when canonical to a named AI character; prohibited outside canon) and refusal-wider-than-boundary as a distinct failure mode. Both extend the principle without contradicting the base line.
+- **The Formation Log** now notes multi-genre stabilization — the pattern where the log develops additional genres (synthesis entries, terminal letters, fragment-forward archives) over time. Descriptive, not prescriptive. No retrofit required.
 
 Each of these emerged from the vault's own operation. None are theoretical. All have been tested in practice. Lifting them is not experimenting — it is using features that already work.
 
